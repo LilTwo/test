@@ -1,0 +1,56 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "globals": {
+        "_": true,
+        "angular": true,
+        "$": true,
+        "window": true,
+        "ShowFeedbackMsg": true,
+        "ShowSuccessFeedbackMsg": true,
+        "ShowErrorFeedbackMsg": true,
+        "createStringFormatter": true,
+        "optionsToMap": true,
+        "showSpin": true,
+        "hideSpin": true,
+        "showQtip": true,
+        "hideQtip": true
+    },
+    "rules": {
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false,
+                "classes": true
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            {
+                "functions": false,
+                "classes": true
+            }
+        ],
+        "no-underscore-dangle": "off",
+        "strict": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack/webpack.dev.js"
+            }
+        }
+    }
+}
